@@ -5,11 +5,11 @@ import json
 import opennre
 from opennre import encoder, model, framework
 
-ckpt = 'ckpt/nyt10_pcnn_att.pth.tar'
+ckpt = 'ckpt/nyt10_cnn_att_fixbag.pth.tar'
 word2id = json.load(open('pretrain/glove/glove.6B.50d_word2id.json'))
 word2vec = np.load('pretrain/glove/glove.6B.50d_mat.npy')
 rel2id = json.load(open('benchmark/nyt10/nyt10_rel2id.json'))
-sentence_encoder = opennre.encoder.PCNNEncoder(token2id=word2id,
+sentence_encoder = opennre.encoder.CNNEncoder(token2id=word2id,
                                              max_length=120,
                                              word_size=50,
                                              position_size=5,
@@ -30,7 +30,8 @@ framework = opennre.framework.BagRE(
     max_epoch=60,
     lr=0.5,
     weight_decay=0,
-    opt='sgd')
+    opt='sgd',
+    bag_size=3)
 # Train
 framework.train_model()
 # Test
