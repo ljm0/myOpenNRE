@@ -117,5 +117,5 @@ benchmark/tacred
 *.swp
 
 # debug
-./benchmark/nyt10-ori
-./train_nyt10_pcnn_att_ori.py
+benchmark/nyt10-ori
+train_nyt10_pcnn_att_ori.py
