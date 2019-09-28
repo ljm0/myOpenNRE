@@ -10,6 +10,18 @@ Contributed by [Tianyu Gao](https://github.com/gaotianyu1350), [Xu Han](https://
 
 If you want to learn more about neural relation extraction, visit another project of ours [NREPapers](https://github.com/thunlp/NREPapers).
 
+If you use the code, please cite the following paper:
+
+```
+@inproceedings{han2019opennre,
+  title={OpenNRE: An Open and Extensible Toolkit for Neural Relation Extraction},
+  author={Han, Xu and Gao, Tianyu and Yao, Yuan and Ye, Deming and Liu, Zhiyuan and Sun, Maosong },
+  booktitle={Proceedings of EMNLP},
+  year={2019}
+}
+```
+
+
 **BIG UPDATE**: The project has been completely reconstructed and is faster, more extendable and the codes are easier to read and use now. If you need get to the old version, please refer to branch [old_version](https://github.com/thunlp/OpenNRE/tree/old_version).  
 
 New features:
