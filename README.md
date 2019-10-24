@@ -1,11 +1,12 @@
 # OpenNRE
 
-[Pre-processed NYT Data](https://drive.google.com/file/d/1rNu1rQVzQm95afZn1UtYiFHLwO30pIBY/view?usp=sharing)
-
 ## Bugs:
 
 1. pre-pocess
-2. tersonflow version: tensorflow==1.15rc2?
+   - Please use this pre-processed data:
+    [Pre-processed NYT Data](https://drive.google.com/file/d/1rNu1rQVzQm95afZn1UtYiFHLwO30pIBY/view?usp=sharing)
+2. tersonflow version: tensorflow==1.14 (based on TACRED environment, then add the 1.14 tensorflow seems good)
+   - There will be many strange bugs, if you use the official requirement.txt
 
 *** **UPDATE** ***
 
