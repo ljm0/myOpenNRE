@@ -5,6 +5,7 @@ summary
 checkpoint
 test_result
 log_sbatch
+venv
 
 # files
 *.pyc
