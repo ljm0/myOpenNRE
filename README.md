@@ -7,6 +7,8 @@
     [Pre-processed NYT Data](https://drive.google.com/file/d/1rNu1rQVzQm95afZn1UtYiFHLwO30pIBY/view?usp=sharing)
 2. tersonflow version: tensorflow==1.14 (based on TACRED environment, then add the 1.14 tensorflow seems good)
    - There will be many strange bugs, if you use the official requirement.txt
+3. About memory:
+   At least 32 GB (because Out of Memory or Memory error at 20GB laptop)
 
 *** **UPDATE** ***
 
