@@ -1,5 +1,7 @@
 # OpenNRE
 
+[Pre-processed NYT Data](https://drive.google.com/file/d/1rNu1rQVzQm95afZn1UtYiFHLwO30pIBY/view?usp=sharing)
+
 *** **UPDATE** ***
 
 **We are now developing a new version of OpenNRE including sentence-level, bag-level(distant supervision) and few-shot RE on branch [nrekit](https://github.com/thunlp/OpenNRE/tree/nrekit). Refer to the `nrekit` branch if you are interested.**
