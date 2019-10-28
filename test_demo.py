@@ -3,7 +3,8 @@ import numpy as np
 import tensorflow as tf
 import sys
 import os
-import json
+# import json
+import simplejson as json
 
 dataset_name = 'nyt'
 if len(sys.argv) > 1:
@@ -100,4 +101,3 @@ auc, pred_result = framework.test(model, ckpt="./checkpoint/" + dataset_name + "
 
 with open('./test_result/' + dataset_name + "_" + model.encoder + "_" + model.selector + "_pred.json", 'w') as outfile:
     json.dump(pred_result, outfile)
-
