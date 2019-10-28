@@ -14,11 +14,15 @@ def main():
     for model in models:
         x = np.load(os.path.join(result_dir, model +'_x' + '.npy')) 
         y = np.load(os.path.join(result_dir, model + '_y' + '.npy'))
-        f1 = (2 * x * y / (x + y + 1e-20)).max()
+        f1 = (2 * x * y / (x + y + 1e-20))
+        f1_max = f1.max()
         auc = sklearn.metrics.auc(x=x, y=y)
         #plt.plot(x, y, lw=2, label=model + '-auc='+str(auc))
         plt.plot(x, y, lw=2, label=model)
-        print(model + ' : ' + 'auc = ' + str(auc) + ' | ' + 'max F1 = ' + str(f1))
+        print(model + ' : ' + 'auc = ' + str(auc) + ' | ' + 'max F1 = ' + str(f1_max))
+        for index, point in enumerate(f1):
+            if point == f1_max:
+                print("Recall: ", x[index], "Precision: ", y[index])
         print('    P@100: {} | P@200: {} | P@300: {} | Mean: {}'.format(y[100], y[200], y[300], (y[100] + y[200] + y[300]) / 3))
        
     plt.xlabel('Recall')
