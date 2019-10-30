@@ -1,4 +1,5 @@
-# OpenNRE
+# Based on OpenNRE
+The distant supervision model is based on [OpenNRE framework](https://github.com/thunlp/OpenNRE)
 
 ## Key Information:
 
@@ -11,36 +12,17 @@
 3. About memory:
    - At least 32 GB (because Out of Memory or Memory error at 20GB laptop), about
    - Running time: about 7 hours on server (64GB memory)
+4. Test Results - NYT10 Dataset
+- PCNN + Attention: max F1: 0.4078 (Recall: 0.3697 Precision: 0.4546)
 
-*** **UPDATE** ***
+- AUC Results: 
 
-**We are now developing a new version of OpenNRE including sentence-level, bag-level(distant supervision) and few-shot RE on branch [nrekit](https://github.com/thunlp/OpenNRE/tree/nrekit). Refer to the `nrekit` branch if you are interested.**
-
-An open-source framework for neural relation extraction.
-
-Contributed by [Tianyu Gao](https://github.com/gaotianyu1350), [Xu Han](https://github.com/THUCSTHanxu13), [Shulian Cao](https://github.com/ShulinCao), [Lumin Tang](https://github.com/Tsingularity), [Yankai Lin](https://github.com/Mrlyk423), [Zhiyuan Liu](http://nlp.csai.tsinghua.edu.cn/~lzy/)
-
-If you want to learn more about neural relation extraction, visit another project of ours [NREPapers](https://github.com/thunlp/NREPapers).
-
-If you use the code, please cite the following paper:
-
-```
-@inproceedings{han2019opennre,
-  title={OpenNRE: An Open and Extensible Toolkit for Neural Relation Extraction},
-  author={Han, Xu and Gao, Tianyu and Yao, Yuan and Ye, Deming and Liu, Zhiyuan and Sun, Maosong },
-  booktitle={Proceedings of EMNLP},
-  year={2019}
-}
-```
-
-
-**BIG UPDATE**: The project has been completely reconstructed and is faster, more extendable and the codes are easier to read and use now. If you need get to the old version, please refer to branch [old_version](https://github.com/thunlp/OpenNRE/tree/old_version).  
-
-New features:
-
-- JSON data support.
-- Multi GPU training.
-- Validating while training.
+Model |  Attention | Maximum | Average
+---- | ---- | ---- | ----
+PCNN | 0.3408 | 0.3247 | 0.3190
+CNN | 0.3277 | 0.3151 | 0.3044
+RNN | 0.3418 | 0.3473 | 0.3405
+BiRNN | 0.3352 | 0.3575 | 0.3244
 
 ## Overview
 
@@ -217,19 +199,6 @@ python train_demo.py {DATASET_NAME} {ENCODER_NAME} {SELECTOR_NAME} rl
 For example, by running `python train_demo.py nyt pcnn att rl`, you will get a `pcnn_att` model trained by RL.
 
 For how the RL module helps alleviate false positive problem in DS data, please refer to the paper.
-
-## Test Results
-
-### NYT10 Dataset
-
-AUC Results:
-
-Model |  Attention | Maximum | Average
----- | ---- | ---- | ----
-PCNN | 0.3408 | 0.3247 | 0.3190
-CNN | 0.3277 | 0.3151 | 0.3044
-RNN | 0.3418 | 0.3473 | 0.3405
-BiRNN | 0.3352 | 0.3575 | 0.3244
 
 ## Reference
 
